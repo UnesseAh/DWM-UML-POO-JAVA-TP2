@@ -47,7 +47,11 @@ public class Employe {
     }
 
     public void setSalaire(double salaire) {
-        this.salaire = salaire;
+        if (salaire >= 0) {
+            this.salaire = salaire;
+        } else {
+            System.out.println("Erreur: Le salaire ne peut pas etre negatif.");
+        }
     }
 
     public String getDepartement() {
